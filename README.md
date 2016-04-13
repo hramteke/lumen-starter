@@ -18,11 +18,18 @@ This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to 
 * [Docker Toolbox](https://www.docker.com/products/docker-toolbox)
 * [GIT Version Control client](https://git-scm.com/)
 
+### Setup TravisCI and DockerHub Integration
+ * Setup DockerHub repo mirroring repo/namespace of github project
+ * Setup travis-ci integration with env vars:
+    * `DOCKER_EMAIL`
+    * `DOCKER_USERNAME`
+    * `DOCKER_PASSWORD`
+
 ### Using This Repository
 
 1. FORK this repo **(do not clone)**
 2. Reference the [contributing guide](https://github.com/realpage/lumen/blob/master/CONTRIBUTING.md) for running this application locally
-3. `docker exec -it $(docker ps -f name=fpm -q) php artisan clean:template` to strip out example migrations, seeds, tests, etc...
+3. After running locally `docker exec -it $(docker ps -f name=fpm -q) php artisan clean:template` to strip out example migrations, seeds, tests, etc...
 
 ### FAQ
 
