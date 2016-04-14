@@ -1,8 +1,8 @@
-## Lumen Starter Template [![Build Status](https://travis-ci.org/realpage/lumen.svg?branch=master)](https://travis-ci.org/realpage/lumen)
+## Lumen Starter Template [![Build Status](https://travis-ci.org/realpage/lumen-starter.svg?branch=master)](https://travis-ci.org/realpage/lumen)
 
 This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to be forked and used for new projects.
 
-> For details on how to contribute to this repo, please check out the [contributing guide](https://github.com/Realpage/lumen/blob/master/CONTRIBUTING.md).
+> For details on how to contribute to this repo, please check out the [contributing guide](https://github.com/realpage/lumen-starter/blob/master/CONTRIBUTING.md).
 
 ### What's Included
 
