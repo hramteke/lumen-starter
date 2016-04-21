@@ -1,9 +1,17 @@
-## Lumen Starter Template [![Build Status](https://travis-ci.org/realpage/lumen-starter.svg?branch=master)](https://travis-ci.org/realpage/lumen) [![Dependency Status](https://www.versioneye.com/user/projects/5711482afcd19a00415b180c/badge.svg)](https://www.versioneye.com/user/projects/5711482afcd19a00415b180c)
+## Lumen Starter Template [![Build Status](https://travis-ci.org/realpage/lumen-starter.svg?branch=master)](https://travis-ci.org/realpage/lumen)
 
 This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to be forked and used for new projects.
 
+## README Contents
+
+* [What's Included](#whats-included)
+* [Requirements](#requirements)
+* [Using This Repository](#using-this-repo)
+* [Continuous Integration/Deployment Workflow Diagram](http://realpage.github.io/lumen-starter/ci-cd-foundation-lumen-starter-workflow.png)
+
 > For details on how to contribute to this repo, please check out the [contributing guide](https://github.com/realpage/lumen-starter/blob/master/CONTRIBUTING.md).
 
+<a name="whats-included" />
 ### What's Included
 
  * Latest version of Lumen
@@ -13,6 +21,7 @@ This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to 
     * runs [phpunit](https://phpunit.de/) tests within docker containers
     * pushes deploy-ready containers for `develop`, `staging`, `master` branches to [DockerHub](http://hub.docker.com)
 
+<a name="requirements" />
 ### Requirements
 
 * [Docker Toolbox](https://www.docker.com/products/docker-toolbox)
@@ -25,6 +34,7 @@ This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to 
     * `DOCKER_USERNAME`
     * `DOCKER_PASSWORD`
 
+<a name="using-this-repo" />
 ### Using This Repository
 
 1. FORK this repo **(do not clone)**
