@@ -16,6 +16,7 @@ class CreateQuotesTable extends Migration
             $table->increments('id');
             $table->string('phrase');
             $table->string('author');
+            $table->timestamps();
         });
     }
 

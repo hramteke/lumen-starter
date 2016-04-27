@@ -10,11 +10,6 @@ ADD . /var/www/html
 
 WORKDIR /var/www/html
 
-# Install Node.js for Aglio implementation
-RUN curl -sL https://deb.nodesource.com/setup | bash - \
-    && apt-get install -y build-essential nodejs \
-    && npm install -g npm
-
 # Install Composer
 RUN apt-get update && apt-get install -y git zip unzip \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \

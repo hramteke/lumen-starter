@@ -4,7 +4,6 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
-use PhpParser\Node\Scalar\MagicConst\File;
 use Symfony\Component\Process\Process;
 
 class CleanTemplate extends Command
@@ -32,12 +31,16 @@ class CleanTemplate extends Command
     public function handle()
     {
         if ($this->option('force')) {
+            $resource = true;
+            $docs = true;
             $dbReset = true;
             $migrations = true;
             $seeds = true;
             $route = true;
             $test = true;
         } else {
+            $resource = $this->confirm('Remove example resource?', true);
+            $docs = $this->conform('Remove example api docs?', true);
             $dbReset = $this->confirm('Reset database migrations?', true);
             $migrations = $this->confirm(
                 'Remove example database migration?',
@@ -46,6 +49,30 @@ class CleanTemplate extends Command
             $seeds = $this->confirm('Remove example database seed?', true);
             $route = $this->confirm('Remove example route?', true);
             $test = $this->confirm('Remove example test?', true);
+        }
+
+        if ($resource) {
+            $resourceFilename = base_path('app/Quote.php');
+            $resourceSchemaFilename = base_path('app/Schemas/QuoteSchema.php');
+            $resourceControllerFilename = base_path('app/Http/Controllers/Api/QuoteController.php');
+            if ($this->deleteFile($resourceFilename, 'Example model')) {
+                $this->info('Removing example model.');
+            }
+            if ($this->deleteFile($resourceSchemaFilename, 'Example model schema')) {
+                $this->info('Removing example model schema.');
+            }
+            if ($this->deleteFile($resourceControllerFilename, 'Example controller')) {
+                $this->info('Removing example controller.');
+            }
+        }
+
+        if ($docs) {
+            $docsFile = base_path('resources/docs/api-documentation.apib');
+            $resourceDocsDir = base_path('resources/docs/quote');
+            if ($this->deleteDirectory($resourceDocsDir, 'Example docs directory')) {
+                $this->info('Removing example docs directory');
+            }
+            $this->removeLineContaining($docsFile, 'Quote');
         }
 
         if ($dbReset) {
@@ -112,6 +139,18 @@ class CleanTemplate extends Command
             $system->delete($filename);
         } else {
             $this->warn("$type already deleted.");
+            return false;
+        }
+        return true;
+    }
+
+    private function deleteDirectory($dirname, $type = null)
+    {
+        $system = new Filesystem();
+        if ($system->exists($dirname)) {
+            $system->deleteDirectory($dirname);
+        } else {
+            $this->warn("$type already deleted");
             return false;
         }
         return true;

@@ -4,17 +4,26 @@
     "keywords": ["framework", "laravel", "lumen"],
     "license": "MIT",
     "type": "project",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/neomerx/json-api"
+        }
+    ],
     "require": {
-        "php": ">=5.5.9",
+        "php": "~7.0",
         "laravel/lumen-framework": "5.2.*",
-        "vlucas/phpdotenv": "~2.2"
+        "vlucas/phpdotenv": "~2.2",
+        "neomerx/json-api": "dev-master",
+        "realpage/json-api-for-lumen": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "phpunit/phpunit": "~5.0",
         "vluzrmos/tinker": "^1.1",
         "realpage/builder": "~0.1",
-        "squizlabs/php_codesniffer": "^2.5"
+        "squizlabs/php_codesniffer": "^2.5",
+        "ddelnano/dredd-hooks-php": "^1.1"
     },
     "autoload": {
         "psr-4": {
@@ -26,6 +35,5 @@
             "tests/",
             "database/"
         ]
-    },
-    "minimum-stability": "stable"
+    }
 }

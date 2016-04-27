@@ -10,11 +10,14 @@ services:
     volumes:
       - ./:/var/www/html
   web:
+    build:
+      context: .
+      dockerfile: infrastructure/nginx/Dockerfile
     image: realpage/nginx:1.9
     volumes:
-      - ./infrastructure/nginx/default.conf:/etc/nginx/conf.d/default.conf
-    volumes_from:
-      - fpm
+      - ./infrastructure/nginx:/etc/nginx/conf.d
+      - ./resources:/var/www/html/resources
+      - ./public:/var/www/html/public
     ports:
       - "80:80"
   db:
@@ -25,3 +28,7 @@ services:
       POSTGRES_USER: service_user
       POSTGRES_PASSWORD: P@ssw0rd
       POSTGRES_DB: service_db
+  dredd:
+    image: realpage/dredd:1.0
+    volumes_from:
+      - fpm

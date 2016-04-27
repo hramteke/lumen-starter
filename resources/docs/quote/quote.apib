@@ -1,0 +1,107 @@
+## Quote [/quotes]
+
+### Get the index of the Quotes [GET]
+
+To get an example response
+
++ Request (application/vnd.api+json)
+
+    + Headers
+
+            Accept: application/vnd.api+json
+            Authorization: Token ApiKey123
+
++ Response 200 (application/vnd.api+json)
+
+        {
+            "data": [
+                {
+                    "type": "quotes",
+                    "id": "1",
+                    "attributes": {
+                        "phrase": "When there is no desire, all things are at peace.",
+                        "author": "Laozi"
+                    },
+                    "links": {
+                        "self": "http://192.168.99.100/api/v1/quotes/1"
+                    }
+                },
+                {
+                    "type": "quotes",
+                    "id": "2",
+                    "attributes": {
+                        "phrase": "Simplicity is the ultimate sophistication.",
+                        "author": "Leonardo da Vinci"
+                    },
+                    "links": {
+                        "self": "http://192.168.99.100/api/v1/quotes/2"
+                    }
+                },
+                {
+                    "type": "quotes",
+                    "id": "3",
+                    "attributes": {
+                        "phrase": "Simplicity is the essence of happiness.",
+                        "author": "Cedric Bledsoe"
+                    },
+                    "links": {
+                        "self": "http://192.168.99.100/api/v1/quotes/3"
+                    }
+                },
+                {
+                    "type": "quotes",
+                    "id": "4",
+                    "attributes": {
+                        "phrase": "Smile, breathe, and go slowly.",
+                        "author": "Thich Nhat Hanh"
+                    },
+                    "links": {
+                        "self": "http://192.168.99.100/api/v1/quotes/4"
+                    }
+                },
+                {
+                    "type": "quotes",
+                    "id": "5",
+                    "attributes": {
+                        "phrase": "Simplicity is an acquired taste.",
+                        "author": "Katharine Gerould"
+                    },
+                    "links": {
+                        "self": "http://192.168.99.100/api/v1/quotes/5"
+                    }
+                },
+                {
+                    "type": "quotes",
+                    "id": "6",
+                    "attributes": {
+                        "phrase": "Well begun is half done.",
+                        "author": "Aristotle"
+                    },
+                    "links": {
+                        "self": "http://192.168.99.100/api/v1/quotes/6"
+                    }
+                },
+                {
+                    "type": "quotes",
+                    "id": "7",
+                    "attributes": {
+                        "phrase": "He who is contented is rich.",
+                        "author": "Laozi"
+                    },
+                    "links": {
+                        "self": "http://192.168.99.100/api/v1/quotes/7"
+                    }
+                },
+                {
+                    "type": "quotes",
+                    "id": "8",
+                    "attributes": {
+                        "phrase": "Very little is needed to make a happy life.",
+                        "author": "Marcus Antoninus"
+                    },
+                    "links": {
+                        "self": "http://192.168.99.100/api/v1/quotes/8"
+                    }
+                }
+            ]
+        }

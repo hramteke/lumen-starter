@@ -1,4 +1,4 @@
-## Lumen Starter Template [![Build Status](https://travis-ci.org/realpage/lumen-starter.svg?branch=master)](https://travis-ci.org/realpage/lumen)
+## Lumen Starter Template [![Build Status](https://travis-ci.org/realpage/lumen-starter.svg?branch=master)](https://travis-ci.org/realpage/lumen) [![Dependency Status](https://www.versioneye.com/user/projects/5711482afcd19a00415b180c/badge.svg)](https://www.versioneye.com/user/projects/5711482afcd19a00415b180c)
 
 This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to be forked and used for new projects.
 
@@ -20,6 +20,7 @@ This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to 
     * checks [psr-2 compliance](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) (with [phpcs](https://github.com/squizlabs/PHP_CodeSniffer))
     * runs [phpunit](https://phpunit.de/) tests within docker containers
     * pushes deploy-ready containers for `develop`, `staging`, `master` branches to [DockerHub](http://hub.docker.com)
+ * [Dredd support](https://github.com/apiaryio/dredd) for ensuring accurate API documentation
 
 <a name="requirements" />
 ### Requirements

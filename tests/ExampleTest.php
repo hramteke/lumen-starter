@@ -11,6 +11,6 @@ class ExampleTest extends TestCase
      */
     public function testExample()
     {
-        $this->get('/')->assertResponseOk();
+        $this->get('/api/v1/quotes', ['Accept' => 'application/vnd.api+json'])->assertResponseOk();
     }
 }
