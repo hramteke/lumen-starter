@@ -22,19 +22,6 @@ This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to 
     * pushes deploy-ready containers for `develop`, `staging`, `master` branches to [DockerHub](http://hub.docker.com)
  * [Dredd support](https://github.com/apiaryio/dredd) for ensuring accurate API documentation
 
-<a name="requirements" />
-### Requirements
-
-* [Docker Toolbox](https://www.docker.com/products/docker-toolbox)
-* [GIT Version Control client](https://git-scm.com/)
-
-### Setup TravisCI and DockerHub Integration
- * Setup DockerHub repo mirroring repo/namespace of github project
- * Setup travis-ci integration with env vars:
-    * `DOCKER_EMAIL`
-    * `DOCKER_USERNAME`
-    * `DOCKER_PASSWORD`
-
 <a name="using-this-repo" />
 ### Using This Repository
 

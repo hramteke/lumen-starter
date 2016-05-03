@@ -1,3 +1,10 @@
+<a name="requirements" />
+# Requirements
+
+* [Docker Toolbox](https://www.docker.com/products/docker-toolbox)
+* [GIT Version Control client](https://git-scm.com/)
+
+<a name="running-locally" />
 # Running locally
 
 1. GIT clone this repo
@@ -7,7 +14,7 @@
 
 > If you'd like to see the log output you can attach to consolidated logs with `docker-compose logs` (`ctrl + c` to exit)
 
-5. Install composer dependencies by running `docker run -i -v $(pwd):/var/www/html realpage/builder:composer-1 composer install --prefer-dist`
+5. Install composer dependencies by running `docker exec -it $(docker-compose ps -q fpm) composer install --prefer-dist`
 
 > After composer dependencies are installed for the first time, you can use [builder commands](https://github.com/realpage/builder#usage) as shortcuts.
 
