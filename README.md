@@ -1,4 +1,4 @@
-## Lumen Starter Template [![Build Status](https://travis-ci.org/realpage/lumen-starter.svg?branch=master)](https://travis-ci.org/realpage/lumen) [![Dependency Status](https://www.versioneye.com/user/projects/5711482afcd19a00415b180c/badge.svg)](https://www.versioneye.com/user/projects/5711482afcd19a00415b180c)
+## Lumen Starter Template [![Build Status](https://travis-ci.org/realpage/lumen-starter.svg?branch=master)](https://travis-ci.org/realpage/lumen-starter) [![Dependency Status](https://www.versioneye.com/user/projects/5711482afcd19a00415b180c/badge.svg)](https://www.versioneye.com/user/projects/5711482afcd19a00415b180c)
 
 This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to be forked and used for new projects.
 
