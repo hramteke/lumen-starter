@@ -1,7 +1,6 @@
 FROM realpage/nginx:1.9
 MAINTAINER Foundation DevOps foundation-devops@realpage.com
-LABEL version="1.0.3-beta" \
-      com.realpage.nginx.version="1.9.14"
+LABEL com.realpage.nginx.version="1.9"
 
 # Copy the application public files to the container
 ADD public /var/www/html/public
