@@ -5,6 +5,7 @@ LABEL com.realpage.nginx.version="1.9"
 # Copy the application public files to the container
 ADD public /var/www/html/public
 ADD resources/docs /var/www/html/resources/docs
+ADD infrastructure/nginx /etc/nginx/conf.d
 
 WORKDIR /var/www/html
 
@@ -33,6 +34,5 @@ RUN apk update && \
 
 # Remove unneeded resources and make conf directory
 RUN rm -rf resources/ && \
-    mkdir -p /etc/nginx/conf.d && \
     npm uninstall -g aglio hercule && \
     apk del nodejs python make build-base

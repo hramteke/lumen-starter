@@ -30,6 +30,9 @@ This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to 
 3. After running locally `docker exec -it $(docker ps -f name=fpm -q) php artisan clean:template` to strip out example migrations, seeds, tests, etc...
 
 ### FAQ
+ * **How do I update my nginx config?**
+   * the `default.conf` file located in the `infrastructure/nginx` directory will be added to the nginx container as part of the build
+   * update the file and rebuild the container via `docker-compose build` to propagate the changes
 
 #### Is there a shortcut for running commands within specific containers?
 
