@@ -31,8 +31,9 @@ $app->get('/healthcheck/{token}', function ($token) {
     if ($token == env('HEALTHCHECK_TOKEN')) {
         $connection = DB::connection();
         $connection->disconnect();
-        return response();
-    } else {
-        throw new \Exception('Invalid healthcheck token');
+
+        return response('');
     }
+
+    throw new \Exception('Invalid healthcheck token');
 });
