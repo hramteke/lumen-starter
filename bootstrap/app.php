@@ -80,7 +80,7 @@ $app->routeMiddleware(['jsonApi.enforceMediaType' => RealPage\JsonApi\Lumen\Enfo
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
+ $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 $app->register(RealPage\JsonApi\Lumen\ServiceProvider::class);
