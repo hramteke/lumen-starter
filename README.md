@@ -25,16 +25,24 @@ This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to 
 <a name="using-this-repo" />
 ### Using This Repository
 
-1. FORK this repo **(do not clone)**
-2. Reference the [contributing guide](https://github.com/realpage/lumen/blob/master/CONTRIBUTING.md) for running this application locally
-3. After running locally `docker exec -it $(docker ps -f name=fpm -q) php artisan clean:template` to strip out example migrations, seeds, tests, etc...
+We recommend [watching this repository](https://help.github.com/articles/watching-repositories/) so you can apply updates made to this project to yours.
+
+_Realpage teams should contact **foundation-devops@realpage.com** using [this email template](https://github.com/realpage/lumen-starter/wiki) to get everything setup._
+
+For everyone else:
+
+1. Clone this repo and delete the `.git` directory
+2. Run `git init` and [change the origin of the repo](https://help.github.com/articles/changing-a-remote-s-url/) to point to your remote repository
+3. Reference the [contributing guide](https://github.com/realpage/lumen/blob/master/CONTRIBUTING.md) for running this application locally
+4. After running locally `docker exec -it $(docker ps -f name=fpm -q) php artisan clean:template` to strip out example migrations, seeds, tests, etc...
 
 ### FAQ
- * **How do I update my nginx config?**
+
+##### **How do I update my nginx config?**
    * the `default.conf` file located in the `infrastructure/nginx` directory will be added to the nginx container as part of the build
    * update the file and rebuild the container via `docker-compose build` to propagate the changes
 
-#### Is there a shortcut for running commands within specific containers?
+##### **Is there a shortcut for running commands within specific containers?**
 
 Yes!  [Using an alias](http://askubuntu.com/a/17537/132639) below, you can run commands in containers with `dockerexc fpm php -v` instead of `docker exec -it $(docker ps -f name=fpm -q) php -v`.
 
