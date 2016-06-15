@@ -40,7 +40,7 @@ class CleanTemplate extends Command
             $test = true;
         } else {
             $resource = $this->confirm('Remove example resource?', true);
-            $docs = $this->conform('Remove example api docs?', true);
+            $docs = $this->confirm('Remove example api docs?', true);
             $dbReset = $this->confirm('Reset database migrations?', true);
             $migrations = $this->confirm(
                 'Remove example database migration?',
