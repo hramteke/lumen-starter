@@ -12,4 +12,4 @@ This project follows the [Realpage Development Standards](https://github.com/rea
 
 This project follows the Realpage CI/CD standards as outlined in this diagram.
 
-![CI/CD Diagram](http://realpage.github.io/lumen-starter/ci-cd-foundation-lumen-starter-workflow.png)
+![CI/CD Diagram](http://realpage.github.io/devops-documentation/foundation-deployment-technical-v1.png)
