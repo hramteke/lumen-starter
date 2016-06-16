@@ -1,6 +1,6 @@
 ## Lumen Starter Template [![Build Status](https://travis-ci.org/realpage/lumen-starter.svg?branch=master)](https://travis-ci.org/realpage/lumen-starter) [![Dependency Status](https://www.versioneye.com/user/projects/5711482afcd19a00415b180c/badge.svg)](https://www.versioneye.com/user/projects/5711482afcd19a00415b180c)
 
-This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to be copied and used for new projects.
+This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to be used for new projects.
 
 ## README Contents
 
@@ -9,7 +9,6 @@ This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to 
 * [Using This Repository](#using-this-repo)
 * [Testing](#testing)
 * [Continuous Integration/Deployment Workflow Diagram](http://realpage.github.io/lumen-starter/ci-cd-foundation-lumen-starter-workflow.png)
-* [Roadmap](#roadmap)
 * [FAQ](#faq)
 
 > For details on how to contribute to this repo, please check out the [contributing guide](https://github.com/realpage/lumen-starter/blob/master/CONTRIBUTING.md).
@@ -17,13 +16,13 @@ This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to 
 <a name="whats-included" />
 ### What's Included
 
- * Latest version of Lumen
- * Pre-configured `docker-compose.yml` that uses nginx, php-fpm and PostgreSQL ([How can I use MySQL?](#use-mysql))
+ * Latest version of Lumen.
+ * Pre-configured `docker-compose.yml` that uses nginx, php-fpm and PostgreSQL. ([How can I use MySQL?](#use-mysql))
  * [Travis-CI](https://travis-ci.org) integration:
-    * checks [psr-2 compliance](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) (with [phpcs](https://github.com/squizlabs/PHP_CodeSniffer))
-    * runs [phpunit](https://phpunit.de/) tests within docker containers
-    * pushes deploy-ready containers for `develop`, `staging`, `master` branches to [DockerHub](http://hub.docker.com)
- * [Dredd support](https://github.com/apiaryio/dredd) for ensuring accurate API documentation
+    * Checks [psr-2 compliance](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) with [phpcs](https://github.com/squizlabs/PHP_CodeSniffer).
+    * Runs [phpunit](https://phpunit.de/) tests within docker containers.
+    * Pushes deploy-ready containers for `develop`, `staging`, `master` branches to [DockerHub](http://hub.docker.com).
+ * [Dredd support](https://github.com/apiaryio/dredd) for ensuring accurate API documentation.
 
 <a name="using-this-repo" />
 ### Using This Repository
@@ -46,12 +45,6 @@ For everyone else:
  * PHPUnit for unit/functional testing
 
 For more on testing, please see: [Testing in the Lumen Starter](https://www.youtube.com/watch?v=BPX792GtcbE) on YouTube.
-
- 
-<a name="roadmap" />
-### Roadmap
-
- * Add cron capabilities to the cli container
 
 <a name="faq" />
 ### FAQ
