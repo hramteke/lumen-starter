@@ -8,7 +8,7 @@ This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to 
 * [Requirements](#requirements)
 * [Using This Repository](#using-this-repo)
 * [Testing](#testing)
-* [Continuous Integration/Deployment Workflow Diagram](http://realpage.github.io/lumen-starter/ci-cd-foundation-lumen-starter-workflow.png)
+* Continuous Integration/Deployment Workflow Diagram - [Diagram](http://realpage.github.io/lumen-starter/ci-cd-foundation-lumen-starter-workflow.png) - [Video](https://www.youtube.com/watch?v=vHpInByhQfM)
 * [FAQ](#faq)
 
 > For details on how to contribute to this repo, please check out the [contributing guide](https://github.com/realpage/lumen-starter/blob/master/CONTRIBUTING.md).
