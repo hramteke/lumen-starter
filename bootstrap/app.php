@@ -90,10 +90,6 @@ if (class_exists('Vluzrmos\Tinker\TinkerServiceProvider')) {
     $app->register(\Vluzrmos\Tinker\TinkerServiceProvider::class);
 }
 
-if (class_exists('RealPage\Builder\BuilderServiceProvider')) {
-    $app->register(\RealPage\Builder\BuilderServiceProvider::class);
-}
-
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes

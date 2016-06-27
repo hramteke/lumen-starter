@@ -38,6 +38,22 @@ For everyone else:
 3. Reference the [contributing guide](https://github.com/realpage/lumen/blob/master/CONTRIBUTING.md) for running this application locally
 4. After running locally `docker exec -it $(docker ps -f name=fpm -q) php artisan clean:template` to strip out example migrations, seeds, tests, etc...
 
+#### Dockerhub Setup
+
+Create a repository that mirrors your GitHub namespace/repository except does not include dashes (DockerHub doesn't allow dashes).  The travis configuration is already designed to handle this transition for you.  An example of this would be:
+
+GitHub: my-namespace/my-new-project
+DockerHub: mynamespace/mynewproject
+
+#### Travis-CI Setup
+
+Configure the following environment variables:
+ * `DOCKER_EMAIL`
+ * `DOCKER_USERNAME`
+ * `DOCKER_PASSWORD`
+
+This user needs to have permission to write to the DockerHub repository so that it can push images.
+
 <a name="testing" />
 ### Testing
 
