@@ -23,6 +23,7 @@ This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to 
     * Runs [phpunit](https://phpunit.de/) tests within docker containers.
     * Pushes deploy-ready containers for `develop`, `staging`, `master` branches to [DockerHub](http://hub.docker.com).
  * [Dredd support](https://github.com/apiaryio/dredd) for ensuring accurate API documentation.
+ * [Environment reset script](https://github.com/realpage/lumen-starter/blob/master/infrastructure/reset_environment.php) to allow a dev to easily reset a seeded environment
 
 <a name="using-this-repo" />
 ### Using This Repository
