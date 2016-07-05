@@ -21,7 +21,7 @@ This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to 
  * [Travis-CI](https://travis-ci.org) integration:
     * Checks [psr-2 compliance](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) with [phpcs](https://github.com/squizlabs/PHP_CodeSniffer).
     * Runs [phpunit](https://phpunit.de/) tests within docker containers.
-    * Pushes deploy-ready containers for `develop`, `staging`, `master` branches to [DockerHub](http://hub.docker.com).
+    * Pushes deploy-ready containers for `staging` and `master` branches to [DockerHub](http://hub.docker.com).
  * [Dredd support](https://github.com/apiaryio/dredd) for ensuring accurate API documentation.
  * [Environment reset script](https://github.com/realpage/lumen-starter/blob/master/infrastructure/reset_environment.php) to allow a dev to easily reset a seeded environment
 
@@ -44,6 +44,7 @@ For everyone else:
 Create a repository that mirrors your GitHub namespace/repository except does not include dashes (DockerHub doesn't allow dashes).  The travis configuration is already designed to handle this transition for you.  An example of this would be:
 
 GitHub: my-namespace/my-new-project
+
 DockerHub: mynamespace/mynewproject
 
 #### Travis-CI Setup
