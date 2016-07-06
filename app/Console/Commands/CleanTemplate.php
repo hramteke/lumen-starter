@@ -126,6 +126,9 @@ class CleanTemplate extends Command
         $this->info('Removing LGTM MAINTAINERS file...');
         $this->deleteFile(base_path('MAINTAINERS'));
 
+        $this->info('Removing example Rancher configuration...');
+        $this->deleteDirectory(base_path('infrastructure/rancher'));
+
         $this->info('Removing this command...');
         $this->removeLineContaining(base_path('app/Console/Kernel.php'), 'CleanTemplate');
         $this->deleteFile(base_path('app/Console/Commands/CleanTemplate.php'));

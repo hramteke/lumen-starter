@@ -24,6 +24,7 @@ This [Laravel Lumen](https://lumen.laravel.com) starter template is intended to 
     * Pushes deploy-ready containers for `staging` and `master` branches to [DockerHub](http://hub.docker.com).
  * [Dredd support](https://github.com/apiaryio/dredd) for ensuring accurate API documentation.
  * [Environment reset script](https://github.com/realpage/lumen-starter/blob/master/infrastructure/reset_environment.php) to allow a dev to easily reset a seeded environment
+ * [Example configuration](infrastructure/rancher-example/README.md) for deploying to [Rancher](http://rancher.com).
 
 <a name="using-this-repo" />
 ### Using This Repository
