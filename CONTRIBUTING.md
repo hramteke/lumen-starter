@@ -18,7 +18,7 @@
 
 > After composer dependencies are installed for the first time, you can use [builder commands](https://github.com/realpage/builder#usage) as shortcuts.
 
-6. Run `docker exec -it $(docker ps -f name=fpm -q) php artisan migrate --seed` (or [use the shortcut](https://github.com/realpage/lumen/tree/readme-updates#is-there-a-shortcut-for-running-commands-within-specific-containers) ) to migrate and seed the database
+6. Run `docker exec -it $(docker ps -f name=fpm -q) php artisan migrate --seed` (or [use the shortcut](https://github.com/realpage/lumen-starter/tree/master#is-there-a-shortcut-for-running-commands-within-specific-containers) ) to migrate and seed the database
 7. Now visit the application at http://192.168.99.100 (the docker-machine's default IP)
 
 <a name="compiling-api-docs" />
