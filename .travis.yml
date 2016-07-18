@@ -34,7 +34,7 @@ before_install:
   - docker-compose ps
 install:
   # Install dev php dependencies
-  - docker run -i -v $(pwd):/var/www/html $(docker images -f label=application=lumen -q ) composer install --no-interaction --prefer-dist
+  - docker-compose run --rm fpm composer install --no-interaction --prefer-dist
 script:
   # Ensure phpcs triggers a failing build
   - docker exec -it $(docker-compose ps -q fpm) vendor/bin/phpcs --config-set ignore_warnings_on_exit 1
