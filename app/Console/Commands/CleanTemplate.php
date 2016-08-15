@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Symfony\Component\Process\Process;
 
+// @codingStandardsIgnoreFile
 class CleanTemplate extends Command
 {
 
@@ -108,9 +109,9 @@ class CleanTemplate extends Command
         }
 
         if ($test) {
-            $routeFilename = base_path('tests/ExampleTest.php');
-            if ($this->deleteFile($routeFilename, 'Example test')) {
-                $this->info('Removing example test...');
+            $acceptanceFilename = base_path('tests/acceptance/QuoteTest.php');
+            if ($this->deleteFile($acceptanceFilename, 'Acceptance test')) {
+                $this->info('Removing example tests...');
             }
         }
 
