@@ -1,11 +1,10 @@
-FROM realpage/nginx:1.9
+FROM realpage/nginx:1.11
 MAINTAINER Foundation DevOps foundation-devops@realpage.com
-LABEL com.realpage.nginx.version="1.9"
+LABEL com.realpage.nginx.version="1.11"
 
 # Copy the application public files to the container
 ADD public /var/www/html/public
 ADD resources/docs /var/www/html/resources/docs
-ADD infrastructure/nginx/default.conf /etc/nginx/conf.d/default.conf
 
 WORKDIR /var/www/html
 
@@ -20,10 +19,10 @@ RUN apk update && \
     npm install -g hercule && \
 
     # Install Aglio for api doc html generation
-    npm install -g aglio && \
+    npm install -g aglio
 
     # Use Hercule to Concatenate .apib files
-    hercule resources/docs/api-documentation.apib -o resources/docs/hercule.apib && \
+RUN hercule resources/docs/api-documentation.apib -o resources/docs/hercule.apib && \
 
     # Use Aglio to generate doc html file
     mkdir -p public/docs/v1 && \
@@ -36,3 +35,10 @@ RUN apk update && \
 RUN rm -rf resources/ && \
     npm uninstall -g aglio hercule && \
     apk del nodejs python make build-base
+
+ADD infrastructure/nginx/default.conf.template /etc/nginx/conf.d/default.conf.template
+
+# Make environment variables available in nginx config - see https://hub.docker.com/_/nginx/
+# Required so we can use ${DOLLAR} in default.conf.. using just $ it gets replaced by envsubst
+ENV DOLLAR=$
+CMD envsubst < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
