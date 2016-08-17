@@ -33,7 +33,7 @@ script:
   # Seed database
   - docker exec -it $(docker-compose ps -q fpm) sh -c "php artisan migrate --seed"
   # Ensure the api documentation is still accurate
-  - docker-compose run --rm dredd dredd /var/www/html/resources/docs/hercule.apib http://web/api/v1
+  - docker-compose run --rm dredd dredd /var/www/html/resources/docs/api-documentation.apib http://web/api/v1
   # Run tests
   - docker exec -it $(docker-compose ps -q fpm) sh -c "vendor/bin/phpunit"
   # Build cli container
