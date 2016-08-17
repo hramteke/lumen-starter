@@ -1,6 +1,5 @@
 language:
   - php
-  - npm
 services: docker
 php:
 - 7.0
@@ -19,9 +18,6 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
   - cp .env.example .env
-  # Hercule for apib transclusion
-  - npm install -g hercule
-  - hercule resources/docs/api-documentation.apib -o resources/docs/hercule.apib
   # Stop the postgres instance travis sets up automatically
   - sudo /etc/init.d/postgresql stop
   # set env vars in the build settings to interact with repositories
